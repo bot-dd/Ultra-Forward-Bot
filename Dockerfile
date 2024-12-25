@@ -1,11 +1,21 @@
+# Use the official Python image from the Docker Hub
 FROM python:3.8-slim-buster
 
-RUN apt update && apt upgrade -y
-RUN apt install git -y
-COPY requirements.txt /requirements.txt
-
-RUN cd /
-RUN pip3 install -U pip && pip3 install -U -r requirements.txt
-RUN mkdir /fwdbot
+# Set the working directory inside the container
 WORKDIR /fwdbot
-CMD ["python3", "/bot.py"]
+
+# Copy the requirements file into the container
+COPY requirements.txt .
+
+# Install any dependencies specified in requirements.txt
+RUN pip install --no-cache-dir -U pip && \
+    pip install --no-cache-dir -r requirements.txt
+
+# Copy the entire project into the working directory
+COPY . .
+
+# Ensure that start.sh is executable
+RUN chmod +x start.sh
+
+# Command to run the bot when the container starts
+CMD ["python", "bot.py"]
