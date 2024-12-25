@@ -15,7 +15,6 @@ RUN pip install --no-cache-dir -U pip && \
 COPY . .
 
 # Ensure that start.sh is executable
-RUN chmod +x start.sh
 
 # Command to run the bot when the container starts
 CMD ["python", "bot.py"]
