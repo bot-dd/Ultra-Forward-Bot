@@ -13,8 +13,8 @@
     "forward",
     "bot"
   ],
-  "success_url": "https://t.me/Silicon_Bot_Update",
-  "repository": "https://github.com/Silicon-Developer/Ultra-Forward-Bot",
+  "success_url": "https://t.me/RM_Movie_Flix",
+  "repository": "https://t.me/RahatVx",
   "env": {
     "API_ID": {
       "description": "Get this value from https://my.telegram.org or @UseTGSBot",
