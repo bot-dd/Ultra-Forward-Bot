@@ -14,7 +14,7 @@ class Config:
     DATABASE_NAME = environ.get("DATABASE_NAME", "Rahat")
     BOT_OWNER_ID = [int(id) for id in environ.get("BOT_OWNER_ID", '7945551029').split()]
     LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002312610528'))
-    FORCE_SUB_CHANNEL = environ.get("FORCE_SUB_CHANNEL", "https://t.me/RM_Movie_Flix") 
+    FORCE_SUB_CHANNEL = environ.get("FORCE_SUB_CHANNEL", "https://t.me/RMxBots") 
     FORCE_SUB_ON = environ.get("FORCE_SUB_ON", "True")
     PORT = environ.get('PORT', '8080')
     
